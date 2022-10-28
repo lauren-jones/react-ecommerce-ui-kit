@@ -1,0 +1,14 @@
+.announcement-bar {
+  background: var(--button-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  font-size: 0.7rem;
+  padding: 3px 0;
+  margin: 0px;
+}
