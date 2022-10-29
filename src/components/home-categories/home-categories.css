@@ -26,3 +26,9 @@
   font-size: 1.8rem;
   font-weight: 300;
 }
+
+@media only screen and (max-width: 780px) {
+  .home-categories-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

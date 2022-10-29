@@ -1,21 +1,18 @@
 import React from "react";
-import './home-categories-category.css';
+import './home-categories-item.css';
 import { Link } from "react-router-dom";
 
-export interface HomeCategoriesCategoryProps {
-   HomeCategory: {
+export interface HomeCategoriesItemProps {
       category: string,
       image: string,
       url: string,
-   }
 }
 
-export const HomeCategoriesCategory = (props: HomeCategoriesCategoryProps) => {
-const {url, category, image} = props.HomeCategory;
+export const HomeCategoriesItem = ({category, image, url}: HomeCategoriesItemProps) => {
 
  return (
    <Link to={url} className="home-category-link">
-      <div className="home-categories-category">
+      <div className="home-categories-item">
          <img src={image} className='home-category-image'/>
          <h3 className="home-category-title">{category}</h3>
       </div>

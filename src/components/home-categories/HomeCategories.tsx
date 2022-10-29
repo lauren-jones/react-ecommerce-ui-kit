@@ -1,6 +1,6 @@
 import React from "react";
 import './home-categories.css';
-import { HomeCategoriesCategory } from "../home-categories-category";
+import { HomeCategoriesItem } from "../home-categories-item";
 
 export interface HomeCategoriesProps {
    HomeCategories: [
@@ -33,16 +33,12 @@ export const HomeCategories = ({HomeCategories}: HomeCategoriesProps) => {
       <h2>Salty Goodness</h2>
       <div className="home-categories-row">
          {HomeCategories.map(function (HomeCategory, index) {
-            if (index < 4) {
-              return (
-                <div className="home-category-wrapper" key={index}>
-                  <HomeCategoriesCategory HomeCategory={HomeCategory} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+            return (
+               <div  className="home-category-wrapper" key={index}>
+                  <HomeCategoriesItem category={HomeCategory.category} image={HomeCategory.image} url={HomeCategory.url} />
+               </div>
+            )
+         })}
       </div>
     </div>
  )

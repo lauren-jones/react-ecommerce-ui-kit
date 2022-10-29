@@ -1,6 +1,6 @@
 {
   "name": "react-ecommerce-ui-kit",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "description": "A react component library built with storybook, designed for a beauty/skincare ecommerce store.",
   "main": "dist/index.ts",
   "module": "esnext",

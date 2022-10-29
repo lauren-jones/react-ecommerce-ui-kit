@@ -1,4 +1,4 @@
-.home-categories-category {
+.home-categories-item {
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   max-width: 350px;
 }
 
-.home-categories-category:hover h3 {
+.home-categories-item:hover h3 {
   color: var(--background-alt);
 }
 
