@@ -11,5 +11,5 @@ const Template: ComponentStory<typeof AnnouncementBar> = (args) => <Announcement
 
 export const Default = Template.bind({})
 Default.args = {
-    announcement: "free shipping on all UK orders over £75",
+    announcement: "free delivery on all UK orders over £35",
 };
