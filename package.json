@@ -1,6 +1,6 @@
 {
   "name": "react-ecommerce-ui-kit",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "A react component library built with storybook, designed for a beauty/skincare ecommerce store.",
   "main": "dist/index.ts",
   "module": "esnext",
@@ -12,7 +12,9 @@
     "es2017"
   ],
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -39,6 +41,9 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-react": "^7.18.6",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
@@ -64,6 +69,9 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0"
   }
 }
