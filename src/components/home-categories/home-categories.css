@@ -1,0 +1,28 @@
+.home-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: var(--background);
+}
+
+.home-categories-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-category-wrapper {
+  margin: 10px;
+}
+
+.home-categories h2 {
+  font-family: var(--secondary-font);
+  text-transform: lowercase;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  font-size: 1.8rem;
+  font-weight: 300;
+}

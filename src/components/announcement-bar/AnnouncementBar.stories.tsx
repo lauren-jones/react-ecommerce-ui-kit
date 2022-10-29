@@ -3,7 +3,7 @@ import { AnnouncementBar } from "./AnnouncementBar";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-    title: 'Announcement Bar',
+    title: 'Announcement bar',
     component: AnnouncementBar,
 } as ComponentMeta<typeof AnnouncementBar>;
 
