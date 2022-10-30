@@ -1,6 +1,6 @@
 .ProductPage {
   display: flex;
-  padding: 20px;
+  padding: 40px;
   background: var(--background);
 }
 
