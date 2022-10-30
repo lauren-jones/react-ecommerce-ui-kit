@@ -87,3 +87,36 @@
 .cart-header {
   border-bottom: 1px solid var(--accordion-color);
 }
+
+.empty-cart {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.empty-cart h2 {
+  font-family: var(--secondary-font);
+  text-transform: lowercase;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.empty-cart p {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  margin-top: 5px;
+}
+
+.empty-cart-continue-shopping {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  margin-top: 5px;
+  text-decoration: underline;
+}

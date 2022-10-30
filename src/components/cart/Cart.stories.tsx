@@ -59,3 +59,8 @@ Default.args = {
   },
   ]
 };
+
+export const Empty = Template.bind({});
+Empty.args = {
+  cartProducts: [],
+};

@@ -6,6 +6,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Price } from '../price/Price';
 import { Button } from '../buttons/Button';
 import { product } from '../product-card/ProductCard';
+import { Link } from "react-router-dom";
 
 export type cartProducts = {product: product, quantity: number}[];
 
@@ -41,38 +42,50 @@ export const Cart = ({cartProducts, handleUpdate, handleDelete, toCheckout}: Car
 
     const [total] = useState(totalAtStart);
 
-    return (
-      <div className="cart">
-        <div className='cart-header'>
-            <h2>Shopping Cart</h2>
-        </div>
-        {cartProducts.map(function (cartProduct, index) {
-            return (
-                <div className='cart-item' key={index}>
-                    <div className="cart-item-left">
-                        <img src={cartProduct.product.images[0]} className='cart-item-image' alt=""/>
-                        <div className="cart-item-info">
-                            <h4>{cartProduct.product.name}</h4>
-                            <Price onSale={cartProduct.product.onSale} currentPrice={cartProduct.product.currentPrice} originalPrice={cartProduct.product.originalPrice}/>
-                            <ProductCounter quantity={2} />
-                            
-                        </div>
-                    </div>
-                    <a className="cart-item-delete" onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="accordion-icon"/></a>
+    if (cartProducts.length > 0) {
+        return (
+            <div className="cart">
+                <div className='cart-header'>
+                    <h2>Shopping Cart</h2>
                 </div>
+                {cartProducts.map(function (cartProduct, index) {
+                    return (
+                        <div className='cart-item' key={index}>
+                            <div className="cart-item-left">
+                                <img src={cartProduct.product.images[0]} className='cart-item-image' alt=""/>
+                                <div className="cart-item-info">
+                                    <h4>{cartProduct.product.name}</h4>
+                                    <Price onSale={cartProduct.product.onSale} currentPrice={cartProduct.product.currentPrice} originalPrice={cartProduct.product.originalPrice}/>
+                                    <ProductCounter quantity={2} />
+                                    
+                                </div>
+                            </div>
+                            <a className="cart-item-delete" onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="accordion-icon"/></a>
+                        </div>
+                    )
+                })}
+                <div className="cart-summary">
+                    <div className='cart-summary-links'>
+                        <a onClick={handleUpdate} className="cart-update">Update cart</a>
+                        <a href="/" className="continue-shopping">Continue shopping</a>
+                    </div>
+                    <div className="cart-summary-subtotal">
+                        <p>Subtotal</p>
+                        <p>£{total.toFixed(2)}</p>
+                    </div>
+                </div>
+                <Button primary={true} label="Go To Checkout" onClick={toCheckout}/>
+            </div>
             )
-        })}
-        <div className="cart-summary">
-            <div className='cart-summary-links'>
-                <a onClick={handleUpdate} className="cart-update">Update cart</a>
-                <a href="/" className="continue-shopping">Continue shopping</a>
+    } else {
+        return (
+            <div className="empty-cart">
+                <h2>Shopping Cart</h2>
+                <p>Your cart is currently empty.</p>
+                <Link to="/" className="empty-cart-continue-shopping">Continue shopping</Link>
             </div>
-            <div className="cart-summary-subtotal">
-                <p>Subtotal</p>
-                <p>£{total.toFixed(2)}</p>
-            </div>
-        </div>
-        <Button primary={true} label="Go To Checkout" onClick={toCheckout}/>
-      </div>
-    )
+        )
+    }
+
+    
 }
