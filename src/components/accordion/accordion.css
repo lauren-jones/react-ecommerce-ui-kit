@@ -1,7 +1,6 @@
 .accordion {
   font-family: var(--primary-font);
   color: var(--accordion-color);
-  max-width: 450px;
   letter-spacing: var(--letter-spacing);
   border-top: 1px solid var(--secondary-color);
 }

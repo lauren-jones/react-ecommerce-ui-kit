@@ -1,0 +1,30 @@
+.recommended-products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-container {
+  margin: 15px;
+}
+
+.recommended-products-container h2 {
+  font-family: var(--secondary-font);
+  text-transform: lowercase;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 780px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}

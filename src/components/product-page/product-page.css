@@ -78,6 +78,10 @@
     flex-direction: column;
   }
 
+  .ProductPage-description {
+    width: 100%;
+  }
+
   .ProductPage-images {
     width: 100%;
   }
