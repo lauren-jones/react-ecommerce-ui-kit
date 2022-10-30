@@ -1,0 +1,18 @@
+.Rating-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Rating-star {
+  font-size: 0.8rem;
+  padding: 0 0.8px;
+}
+
+.grey {
+  color: var(--secondary-color);
+}
+
+.pink {
+  color: var(--background-alt);
+}
