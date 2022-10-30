@@ -1,0 +1,25 @@
+.product-counter {
+  border: 1px solid #bbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  font-size: 0.8rem;
+  padding: 20px 25px;
+  color: var(--primary-color);
+}
+
+.counter-number {
+  padding: 0 5px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.counter-link {
+  font-size: 0.8rem;
+}
