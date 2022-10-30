@@ -12,6 +12,36 @@ const Template: ComponentStory<typeof RecommendedProducts> = (args) => <Recommen
 
 export const Default = Template.bind({});
   Default.args = {
+    title: "You may also like...",
+    products: [{
+        onSale: false,
+        currentPrice: 12.00,
+        originalPrice: 12.00,
+        images: ["https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide2_1296x.jpg?v=1617888074",
+        "https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide1_1728x.jpg?v=1617888074"],
+        name: 'Wild Ride',
+    },
+    {
+        onSale: true,
+        currentPrice: 12.00,
+        originalPrice: 17.00,
+        images: ["https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide2_1296x.jpg?v=1617888074",
+        "https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide1_1728x.jpg?v=1617888074"],
+        name: 'Wild Ride',
+    },
+    {
+        onSale: false,
+        currentPrice: 12.00,
+        originalPrice: 12.00,
+        images: ["https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide2_1296x.jpg?v=1617888074",
+        "https://cdn.shopify.com/s/files/1/0270/1557/7715/products/Salts-WildRide1_1728x.jpg?v=1617888074"],
+        name: 'Wild Ride',
+    }]
+  };
+
+  export const Favourites = Template.bind({});
+  Favourites.args = {
+    title: "Autumn favourites",
     products: [{
         onSale: false,
         currentPrice: 12.00,

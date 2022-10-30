@@ -10,4 +10,5 @@ export { ProductCounter, type ProductCounterProps } from './components/product-c
 export { ProductPage, type ProductPageProps } from './components/product-page';
 export { Rating, type RatingProps } from './components/rating';
 export { RecommendedProducts, type RecommendedProductsProps } from './components/recommended-products';
+export { Values, type ValuesProps } from './components/values';
 
