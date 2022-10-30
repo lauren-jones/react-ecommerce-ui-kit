@@ -4,7 +4,6 @@ import './image-gallery.css';
 export type Images = [
     image1: string,
     image2: string,
-    image3: string,
 ]
 
 export interface ImageGalleryProps {
@@ -28,7 +27,6 @@ export const ImageGallery = ({images}: ImageGalleryProps) => {
             <div className="thumbnail-wrapper">
                 <a onClick={() => handleClick(images[0])}><img src={images[0]} className="thumbnail" alt=""/></a>
                 <a onClick={() => handleClick(images[1])}><img src={images[1]} className="thumbnail" alt=""/></a>
-                <a onClick={() => handleClick(images[2])}><img src={images[2]} className="thumbnail" alt=""/></a>
             </div>
         </div>
     )

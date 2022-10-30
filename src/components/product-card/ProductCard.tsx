@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 import { Images } from '../image-gallery';
 
 export type product = {
+          /**
+   * Product id
+   */
+  id: number,
+            /**
+   * Product category
+   */
+  category: string,
         /**
    * Array of product images
    */
