@@ -1,0 +1,22 @@
+.image-gallery {
+  max-width: 100%;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 7px;
+}
+
+.thumbnail-wrapper {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 50px;
+  padding: 0px 5px;
+}

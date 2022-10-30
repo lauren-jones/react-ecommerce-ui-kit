@@ -31,7 +31,7 @@ export type product = {
     /**
    * Additional info
    */
-  additionalInfo: {title: string, description: string}[];
+  additionalInfo: [{title: string, content: string}, {title: string, content: string}, {title: string, content: string}];
 }
 
 export interface ProductCardProps {
