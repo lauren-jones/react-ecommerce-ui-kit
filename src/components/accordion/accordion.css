@@ -1,0 +1,30 @@
+.accordion {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  max-width: 450px;
+  letter-spacing: var(--letter-spacing);
+  border-top: var(--border);
+}
+
+.accordion-item {
+  border-bottom: var(--border);
+}
+
+.accordion-header {
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 5px 0;
+}
+
+.accordion-item-content {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
