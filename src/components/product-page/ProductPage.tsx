@@ -24,10 +24,11 @@ export const ProductPage = ({product, onClick}: ProductPageProps) => {
                 <h2 className="ProductPage-product-title">{product.name}</h2>
                 <Rating stars={5}/>
                 <div className="ProductPage-product-price"><Price currentPrice={product.currentPrice} originalPrice={product.originalPrice} onSale={product.onSale}/></div>
-                <div className="ProductPage-product-counter"><ProductCounter quantity={1}/></div>
-                <div className="ProductPage-button"><Button primary={true} label="Add To Basket" onClick={onClick}/></div>
-                <a className="ProductPage-wish-list">Add to wish list</a>
-                <p className="ProductPage-shipping">Free shipping on UK orders over £75</p>
+                <div className="ProductPage-description">{product.description}</div>
+                <div className="ProductPage-buttons">
+                    <div className="ProductPage-product-counter"><ProductCounter quantity={1}/></div>
+                    <div className="ProductPage-button"><Button primary={true} label="Add To Basket" onClick={onClick}/></div>
+                </div>
                 <div className="ProductPage-accordion"><Accordion additionalInfo={product.additionalInfo}/></div>
             </div>
         </div>

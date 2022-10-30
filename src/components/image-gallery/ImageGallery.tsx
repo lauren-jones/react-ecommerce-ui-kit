@@ -1,11 +1,17 @@
 import React, {useState} from "react";
 import './image-gallery.css';
 
+export type Images = [
+    image1: string,
+    image2: string,
+    image3: string,
+]
+
 export interface ImageGalleryProps {
             /**
    * Thumbnail product images
    */
-    images: [string, string, string],
+    images: Images,
 }
 
 export const ImageGallery = ({images}: ImageGalleryProps) => {

@@ -2,16 +2,21 @@ import React from 'react';
 import "./product-card.css";
 import { Price } from '../price/Price';
 import { Link } from "react-router-dom";
+import { Images } from '../image-gallery';
 
 export type product = {
         /**
    * Array of product images
    */
-  images: string[];
+  images: Images;
     /**
    * Product title
    */
   name: string;
+      /**
+   * Product title
+   */
+  description: string;
     /**
    * Is the product on sale?
    */

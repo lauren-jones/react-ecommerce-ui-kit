@@ -1,13 +1,13 @@
 .accordion {
   font-family: var(--primary-font);
-  color: var(--primary-color);
+  color: var(--accordion-color);
   max-width: 450px;
   letter-spacing: var(--letter-spacing);
-  border-top: var(--border);
+  border-top: 1px solid var(--secondary-color);
 }
 
 .accordion-item {
-  border-bottom: var(--border);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .accordion-header {

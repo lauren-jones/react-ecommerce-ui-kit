@@ -1,6 +1,7 @@
 .ProductPage {
   display: flex;
-  margin: 20px;
+  padding: 20px;
+  background: var(--background);
 }
 
 .ProductPage-images {
@@ -13,8 +14,19 @@
   margin: 0 20px;
 }
 
+.ProductPage-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.ProductPage-product-counter {
+  min-width: 120px;
+  margin-right: 15px;
+}
+
 .ProductPage-product-title {
   font-family: var(--primary-font);
+  text-transform: uppercase;
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 400;
@@ -23,9 +35,15 @@
   letter-spacing: var(--letter-spacing);
 }
 
-.ProductPage-product-counter {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.ProductPage-description {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 400;
+  width: 80%;
+  line-height: 1.25rem;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
 }
 
 .ProductPage-accordion {
@@ -34,12 +52,8 @@
 }
 
 .ProductPage-product-price {
-  margin-top: 10px;
-}
-
-.ProductPage-button {
-  width: 80%;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .ProductPage-wish-list {
