@@ -6,12 +6,11 @@
 
 .ProductPage-images {
   width: 50%;
-  margin: 0 20px;
 }
 
 .ProductPage-info {
   width: 50%;
-  margin: 0 20px;
+  padding: 0px 40px;
 }
 
 .ProductPage-buttons {
@@ -88,6 +87,7 @@
 
   .ProductPage-info {
     width: 100%;
+    padding-left: 0px;
   }
 
   .ProductPage-accordion {
