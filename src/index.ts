@@ -1,6 +1,7 @@
 export { Accordion, type AccordionProps } from './components/accordion';
 export { AnnouncementBar, type AnnouncementBarProps } from './components/announcement-bar';
 export { Button, type ButtonProps } from './components/buttons';
+export { Cart, type cartProducts, type CartProps } from './components/cart';
 export { HomeCategories, type HomeCategoriesProps } from './components/home-categories';
 export { HomeCategoriesItem, type HomeCategoriesItemProps } from './components/home-categories-item';
 export { ImageGallery, type ImageGalleryProps, type Images } from './components/image-gallery';

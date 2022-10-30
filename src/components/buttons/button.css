@@ -6,6 +6,7 @@
   font-size: 0.8rem;
   padding: 20px 25px;
   text-transform: uppercase;
+  width: 100%;
 }
 .button--primary {
   border: 1px solid var(--primary-color);
