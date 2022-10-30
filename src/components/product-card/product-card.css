@@ -1,0 +1,48 @@
+.ProductCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.ProductCard-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.ProductCard-image img {
+  width: 100%;
+  height: auto;
+}
+
+.ProductCard-image:hover {
+  transform: scale(1.03);
+}
+
+.image-2 {
+  display: none;
+}
+
+.ProductCard:hover .image-1 {
+  display: none;
+}
+
+.ProductCard:hover .image-2 {
+  display: inline;
+}
+
+.ProductCard-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.ProductCard-product-name {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  margin-bottom: 0;
+  margin-top: 20px;
+}

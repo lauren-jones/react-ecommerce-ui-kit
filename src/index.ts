@@ -2,3 +2,4 @@ export { AnnouncementBar, type AnnouncementBarProps } from './components/announc
 export { HomeCategories, type HomeCategoriesProps } from './components/home-categories';
 export { HomeCategoriesItem, type HomeCategoriesItemProps } from './components/home-categories-item';
 export { Button, type ButtonProps } from './components/buttons';
+export { Price, type PriceProps } from './components/price';
