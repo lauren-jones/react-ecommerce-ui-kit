@@ -1,40 +1,31 @@
-import React, {useState} from "react";
+import React from "react";
 import './product-counter.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export interface ProductCounterProps {
-             /**
+    /**
    * Quantity
    */
     quantity: number,
+    /**
+   * Function to handle increase in quantity
+   */
+    handleIncrease?: () => void;
+    /**
+   * Function to handle decrease in quantity
+   */
+    handleDecrease?: () => void;
 }
 
-export const ProductCounter = ({quantity}: ProductCounterProps) => {
-
-    const [counter, setCounter] = useState(quantity);
-
-    function handleIncrease (event: React.MouseEvent<HTMLAnchorElement>) {
-        event.preventDefault();
-        setCounter(counter + 1);
-    }
-
-    function handleDecrease (event: React.MouseEvent<HTMLAnchorElement>) {
-        event.preventDefault();
-
-        if (counter === 1) {
-            setCounter(1);
-        } else {
-            setCounter(counter - 1);
-        }
-    }
+export const ProductCounter = ({quantity, handleIncrease, handleDecrease}: ProductCounterProps) => {
 
     return (
         <div className="product-counter">
             <a onClick={handleDecrease} className="decrease" >
                 <div className="counter-link"><FontAwesomeIcon icon={faMinus} /></div>
             </a>
-            <span className="counter-number">{counter}</span>
+            <span className="counter-number">{quantity}</span>
             <a className="increase" onClick={handleIncrease}>
                 <div className="counter-link"><FontAwesomeIcon icon={faPlus} /></div>
             </a>

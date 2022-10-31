@@ -23,7 +23,8 @@ Default.args = {
             {title: 'How to use', content: 'We recommend a full handful of salts for a relaxing bath, or two handfuls if you’ve got some aches to fix.'},
             {title: 'Delivery', content: 'We deliver across the UK via Royal Mail and offer two delivery options. Standard Delivery under £35 (3 - 5 working days) - £3.40. Special Delivery (1 - 2 working days) £5.00.'},
         ],
-    }
+    },
+    quantity: 1,
 };
 
 export const Sale = Template.bind({})
@@ -40,5 +41,6 @@ Sale.args = {
             {title: 'How to use', content: 'We recommend a full handful of salts for a relaxing bath, or two handfuls if you’ve got some aches to fix.'},
             {title: 'Delivery', content: 'We deliver across the UK via Royal Mail and offer two delivery options. Standard Delivery under £35 (3 - 5 working days) - £3.40. Special Delivery (1 - 2 working days) £5.00.'},
         ],
-    }
+    },
+    quantity: 1,
 };
