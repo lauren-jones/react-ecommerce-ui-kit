@@ -22,7 +22,7 @@ export const ProductPage = ({product, onClick}: ProductPageProps) => {
             <div className="ProductPage-images"><ImageGallery images={product.images}/></div>
             <div className="ProductPage-info">
                 <h2 className="ProductPage-product-title">{product.name}</h2>
-                <Rating stars={5}/>
+                <Rating stars={product.stars}/>
                 <div className="ProductPage-product-price"><Price currentPrice={product.currentPrice} originalPrice={product.originalPrice} onSale={product.onSale}/></div>
                 <div className="ProductPage-description">{product.description}</div>
                 <div className="ProductPage-buttons">

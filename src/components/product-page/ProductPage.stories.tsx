@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof ProductPage> = (args) => <ProductPage {...
 export const Default = Template.bind({})
 Default.args = {
     product: {
+        stars: 5,
         onSale: false,
         currentPrice: 12.00,
         originalPrice: 12.00,
@@ -28,6 +29,7 @@ Default.args = {
 export const Sale = Template.bind({})
 Sale.args = {
     product: {
+        stars: 3,
         onSale: true,
         currentPrice: 12.00,
         originalPrice: 15.50,

@@ -22,9 +22,13 @@ export type product = {
    */
   name: string;
       /**
-   * Product title
+   * Product description
    */
   description: string;
+      /**
+   * Product rating (out of 5)
+   */
+  stars: 0 | 1 | 2 | 3 | 4 | 5;
     /**
    * Is the product on sale?
    */
