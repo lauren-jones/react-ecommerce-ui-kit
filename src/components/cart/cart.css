@@ -5,6 +5,7 @@
   font-weight: 400;
   color: var(--primary-color);
   font-size: 0.9rem;
+  margin: 30px auto;
 }
 
 .cart-item {
