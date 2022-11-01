@@ -11,22 +11,18 @@ export interface ProductCounterProps {
     /**
    * Function to handle increase in quantity
    */
-    handleIncrease?: () => void;
-    /**
-   * Function to handle decrease in quantity
-   */
-    handleDecrease?: () => void;
+    handleQuantity?: () => void;
 }
 
-export const ProductCounter = ({quantity, handleIncrease, handleDecrease}: ProductCounterProps) => {
+export const ProductCounter = ({quantity, handleQuantity}: ProductCounterProps) => {
 
     return (
         <div className="product-counter">
-            <a onClick={handleDecrease} className="decrease" >
+            <a onClick={handleQuantity} className="decrease" >
                 <div className="counter-link"><FontAwesomeIcon icon={faMinus} /></div>
             </a>
             <span className="counter-number">{quantity}</span>
-            <a className="increase" onClick={handleIncrease}>
+            <a className="increase" onClick={handleQuantity}>
                 <div className="counter-link"><FontAwesomeIcon icon={faPlus} /></div>
             </a>
         </div>
