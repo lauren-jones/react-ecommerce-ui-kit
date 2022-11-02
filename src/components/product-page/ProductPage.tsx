@@ -9,24 +9,35 @@ import { Accordion } from "../accordion/Accordion";
 import { product } from "../product-card/ProductCard";
 
 export interface ProductPageProps {
+    /**
+   * Unique identifier
+   */
+  key: product["id"],
+      /**
+   * Product
+   */
   product: product,
       /**
    * Function to handle adding items to cart
    */
-  addToCart?: () => void;
+  AddToCart?: () => void;
         /**
-   * Function to handle quantity increase or decrease
+   * Function to handle quantity increase
    */
-  handleQuantity?: () => void;
+  HandleIncrease?: () => void;
+          /**
+   * Function to handle quantity decrease
+   */
+  HandleDecrease?: () => void;
           /**
    * Product quantity
    */
   quantity: number,
 }
 
-export const ProductPage = ({product, addToCart, handleQuantity, quantity}: ProductPageProps) => {
+export const ProductPage = ({product, AddToCart, HandleIncrease, HandleDecrease, quantity, key}: ProductPageProps) => {
     return (
-        <div className="ProductPage">
+        <div className="ProductPage" key={key}>
             <div className="ProductPage-images"><ImageGallery images={product.images}/></div>
             <div className="ProductPage-info">
                 <h2 className="ProductPage-product-title">{product.name}</h2>
@@ -34,8 +45,8 @@ export const ProductPage = ({product, addToCart, handleQuantity, quantity}: Prod
                 <div className="ProductPage-product-price"><Price currentPrice={product.currentPrice} originalPrice={product.originalPrice} onSale={product.onSale}/></div>
                 <div className="ProductPage-description">{product.description}</div>
                 <div className="ProductPage-buttons">
-                    <div className="ProductPage-product-counter"><ProductCounter handleQuantity={handleQuantity} quantity={quantity}/></div>
-                    <div className="ProductPage-button"><Button primary={true} label="Add To Basket" onClick={addToCart}/></div>
+                    <div className="ProductPage-product-counter"><ProductCounter HandleIncrease={HandleIncrease} HandleDecrease={HandleDecrease} quantity={quantity}/></div>
+                    <div className="ProductPage-button"><Button primary={true} label="Add To Basket" onClick={AddToCart}/></div>
                 </div>
                 <div className="ProductPage-accordion"><Accordion additionalInfo={product.additionalInfo}/></div>
             </div>
