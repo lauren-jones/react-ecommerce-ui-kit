@@ -26,6 +26,7 @@ Default.args = {
         ],
     },
     quantity: 1,
+    ResetCounter: () => {},
 };
 
 export const Sale = Template.bind({})
@@ -45,4 +46,5 @@ Sale.args = {
         ],
     },
     quantity: 1,
+    ResetCounter: () => {},
 };
