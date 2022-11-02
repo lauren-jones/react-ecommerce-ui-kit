@@ -29,18 +29,13 @@ export interface ProductPageProps {
    * Function to handle quantity decrease
    */
   HandleDecrease?: () => void;
-            /**
-   * Reset counter
-   */
-  ResetCounter: () => void;
           /**
    * Product quantity
    */
   quantity: number,
 }
 
-export const ProductPage = ({product, AddToCart, HandleIncrease, HandleDecrease, ResetCounter, quantity, key}: ProductPageProps) => {
-    ResetCounter();
+export const ProductPage = ({product, AddToCart, HandleIncrease, HandleDecrease, quantity, key}: ProductPageProps) => {
 
     return (
         <div className="ProductPage" key={key}>
