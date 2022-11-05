@@ -14,7 +14,7 @@ export interface CartProps {
              /**
    * Array of products and quantities in the cart
    */
-    cartProducts: cartProducts,
+  cartProducts: cartProducts,
       /**
    * Click handler for update cart
    */
@@ -27,9 +27,17 @@ export interface CartProps {
    * Click handler for go to checkout
    */
   toCheckout?: () => void;
+    /**
+   * Handle quantity increase
+   */
+  HandleIncrease: () => void;
+      /**
+   * Handle quantity decrease
+   */
+  HandleDecrease: () => void;
 }
 
-export const Cart = ({cartProducts, handleUpdate, handleDelete, toCheckout}: CartProps) => {
+export const Cart = ({cartProducts, handleUpdate, handleDelete, toCheckout, HandleDecrease, HandleIncrease}: CartProps) => {
 
     const cartItemTotals: number[] = [];
     cartProducts.forEach(function(cartItem) {
@@ -56,8 +64,7 @@ export const Cart = ({cartProducts, handleUpdate, handleDelete, toCheckout}: Car
                                 <div className="cart-item-info">
                                     <h4>{cartProduct.product.name}</h4>
                                     <Price onSale={cartProduct.product.onSale} currentPrice={cartProduct.product.currentPrice} originalPrice={cartProduct.product.originalPrice}/>
-                                    <ProductCounter quantity={cartProduct.quantity} />
-                                    
+                                    <ProductCounter quantity={cartProduct.quantity} HandleIncrease={HandleIncrease} HandleDecrease={HandleDecrease}/>
                                 </div>
                             </div>
                             <a className="cart-item-delete" onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="accordion-icon"/></a>
