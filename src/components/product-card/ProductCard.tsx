@@ -57,7 +57,7 @@ export interface ProductCardProps {
 
 export const ProductCard = ({product}: ProductCardProps) => {
 return (
-   <Link to={product.url} className="ProductCard-link">
+   <Link to={product.url} className="ProductCard-link" key={product.id}>
       <div className="ProductCard">
         <div className='ProductCard-image'>
           <img src={product.images[0]} className='image-1'/>
