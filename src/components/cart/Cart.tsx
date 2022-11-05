@@ -56,7 +56,7 @@ export const Cart = ({cartProducts, handleUpdate, handleDelete, toCheckout}: Car
                                 <div className="cart-item-info">
                                     <h4>{cartProduct.product.name}</h4>
                                     <Price onSale={cartProduct.product.onSale} currentPrice={cartProduct.product.currentPrice} originalPrice={cartProduct.product.originalPrice}/>
-                                    <ProductCounter quantity={2} />
+                                    <ProductCounter quantity={cartProduct.quantity} />
                                     
                                 </div>
                             </div>
