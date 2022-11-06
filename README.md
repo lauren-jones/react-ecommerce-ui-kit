@@ -26,7 +26,7 @@ To Start Storybook:
 
 ## Reflection
 
-This was a side project, built in conjunction with an e-commerce web app UI. Project goals included using Storybook and Typescript for this first time, and using the components to build the frontend of an e-commerce store.
+This was a side project, built in conjunction with an e-commerce web app UI. Project goals included using Storybook and Typescript for the first time, and using the components to build the frontend of an e-commerce store.
 
 The technologies implemented in this project are React, Typescript, Storybook and Rollup. This project did not use the 'create-react-app' boilerplate, since it is a library as opposed to an app.
 
