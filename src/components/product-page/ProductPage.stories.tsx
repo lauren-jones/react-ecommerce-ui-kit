@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductPage } from "./ProductPage";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -7,7 +7,23 @@ export default {
     component: ProductPage,
 } as ComponentMeta<typeof ProductPage>;
 
-const Template: ComponentStory<typeof ProductPage> = (args) => <ProductPage {...args} />;
+const Template: ComponentStory<typeof ProductPage> = (args) => {
+    const [counter, setCounter] = useState(1);
+    
+    const HandleIncrease = () => {
+        setCounter(counter + 1);
+    }
+
+    const HandleDecrease = () => {
+        if (counter === 1) {
+            setCounter(1);
+        } else {
+            setCounter(counter - 1);
+        }
+    }
+
+    return <ProductPage {...args} quantity={counter} HandleIncrease={HandleIncrease} HandleDecrease={HandleDecrease} />
+};
 
 export const Default = Template.bind({})
 Default.args = {
@@ -25,8 +41,6 @@ Default.args = {
             {title: 'Delivery', content: 'We deliver across the UK via Royal Mail and offer two delivery options. Standard Delivery under £35 (3 - 5 working days) - £3.40. Special Delivery (1 - 2 working days) £5.00.'},
         ],
     },
-    quantity: 1,
-    ResetCounter: () => {},
 };
 
 export const Sale = Template.bind({})
@@ -45,6 +59,4 @@ Sale.args = {
             {title: 'Delivery', content: 'We deliver across the UK via Royal Mail and offer two delivery options. Standard Delivery under £35 (3 - 5 working days) - £3.40. Special Delivery (1 - 2 working days) £5.00.'},
         ],
     },
-    quantity: 1,
-    ResetCounter: () => {},
 };
